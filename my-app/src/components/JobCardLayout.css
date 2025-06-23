@@ -1,0 +1,137 @@
+.container {
+  background-color: #f4f6f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.salary-range {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.time {
+  font-size: 12px;
+  color: gray;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+.details {
+  font-size: 14px;
+  color: #555;
+}
+
+.description {
+  margin: 10px 0;
+  font-size: 13px;
+  color: #777;
+  padding-left: 18px;
+}
+
+.apply-btn {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #059ff5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background-color: #007ad9;
+}
+
+
+.hover-text {
+  color: red;
+  font-size: 24px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.hover-text:hover {
+  color: darkred;
+  font-size: 18px;
+}
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
