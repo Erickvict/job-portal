@@ -8,10 +8,13 @@ const app = express();
 
 // Enhanced CORS configuration
 const corsOptions = {
-  origin: process.env.APPLICATION_URL || 'http://localhost:5173', // Fallback for local dev
+  origin: [
+    process.env.APPLICATION_URL, // Your Vercel URL
+    'http://localhost:5173' // For local development
+  ],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true // Enable if using cookies/sessions
+  credentials: true
 };
 
 app.use(cors(corsOptions)); // Only call this once

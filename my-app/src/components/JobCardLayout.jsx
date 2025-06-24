@@ -78,11 +78,21 @@ const JobCardLayout = () => {
     description: '',
   });
 
+
+const apiBaseUrl = import.meta.env.PROD 
+  ? '/api' // When deployed to Vercel
+  : 'http://localhost:5000/api';
+
+
+
+
+
+
   // FETCH JOBS ON LOAD
   useEffect(() => {
   const fetchJobs = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_SERVER_APP_URL}/api/jobs`);
+      const response = await axios.get(`${apiBaseUrl}/api/jobs`);
       
       if (Array.isArray(response.data)) {
         setJobs(response.data);
@@ -113,7 +123,7 @@ const JobCardLayout = () => {
   // 👇 HANDLE PUBLISH TO BACKEND
   const handlePublish = async () => {
   try {
-    const response = await axios.post(`${import.meta.env.VITE_SERVER_APP_URL}/api/jobs`, formData, {
+    const response = await axios.post(`${apiBaseUrl}/api/jobs`, formData, {
       headers: {
         'Content-Type': 'application/json'
       }
